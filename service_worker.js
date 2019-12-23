@@ -1,6 +1,6 @@
-var CACHE_NAME = 'pwa-sample-caches';
+var CACHE_NAME = 'Tetris_app-caches';
 var urlsToCache = [
-    '/username.github.io/',
+    '/kashiwagi_wataru.github.io/',
 ];
 
 if ('serviceWorker' in navigator) {
