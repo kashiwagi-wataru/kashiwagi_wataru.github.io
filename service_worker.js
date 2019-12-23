@@ -3,14 +3,6 @@ var urlsToCache = [
     '/kashiwagi_wataru.github.io/',
 ];
 
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service_worker.js').then(function(registration) {
-        console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }).catch(function(err) {
-        console.log('ServiceWorker registration failed: ', err);
-    });
-    }
-
 // インストール処理
 self.addEventListener('install', function(event) {
     event.waitUntil(
