@@ -10,19 +10,15 @@
 
 
     <script>
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker
-          .register("./serviceWorker.js")
-          .then(function(registration) {
-            if (typeof registration.update == "function") {
-              registration.update();
-            }
-          })
-          .catch(function(error) {
-            console.log("Error Log: " + error);
-          });
-      }
+        if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service_worker.js').then(function(registration) {
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }).catch(function(err) {
+        console.log('ServiceWorker registration failed: ', err);
+    });
+    }
     </script>
+    
   </head>
 
   <body>
