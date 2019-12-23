@@ -7,6 +7,22 @@
 　
     <link rel="manifest" href="manifest.json">
     <title>PWA Sample</title>
+
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("./serviceWorker.js")
+          .then(function(registration) {
+            if (typeof registration.update == "function") {
+              registration.update();
+            }
+          })
+          .catch(function(error) {
+            console.log("Error Log: " + error);
+          });
+      }
+    </script>
   </head>
 
   <body>
